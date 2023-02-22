@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 class MainFrame extends JFrame {
-    private TextPanel textPanel;
-    private Toolbar toolbar;
-    private FormPanel formPanel;
+    private final TextPanel textPanel;
+    private final Toolbar toolbar;
+    private final FormPanel formPanel;
     MainFrame () {
         super("Hello World");
 
@@ -16,9 +16,7 @@ class MainFrame extends JFrame {
         toolbar = new Toolbar();
         formPanel = new FormPanel();
 
-        toolbar.setStringListener((String text) -> {
-            textPanel.appendText(text);
-        });
+        toolbar.setStringListener((String text) -> textPanel.appendText(text));
 
 
         add(toolbar, BorderLayout.NORTH);

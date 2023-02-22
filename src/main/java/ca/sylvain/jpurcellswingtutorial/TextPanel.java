@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 class TextPanel extends JPanel {
-    private JTextArea textArea;
+    private final JTextArea textArea;
     TextPanel() {
         textArea = new JTextArea();
         setLayout(new BorderLayout());

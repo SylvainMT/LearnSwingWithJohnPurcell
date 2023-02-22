@@ -6,8 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 class Toolbar extends JPanel implements ActionListener {
-    private JButton helloBtn;
-    private JButton goodByeBtn;
+    private final JButton helloBtn;
+    private final JButton goodByeBtn;
     private StringListener  textListener;
 
     Toolbar() {
