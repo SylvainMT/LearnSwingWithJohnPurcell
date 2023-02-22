@@ -6,6 +6,7 @@ import java.awt.*;
 class MainFrame extends JFrame {
     private TextPanel textPanel;
     private Toolbar toolbar;
+    private FormPanel formPanel;
     MainFrame () {
         super("Hello World");
 
@@ -13,6 +14,7 @@ class MainFrame extends JFrame {
 
         textPanel = new TextPanel();
         toolbar = new Toolbar();
+        formPanel = new FormPanel();
 
         toolbar.setStringListener((String text) -> {
             textPanel.appendText(text);
@@ -21,6 +23,7 @@ class MainFrame extends JFrame {
 
         add(toolbar, BorderLayout.NORTH);
         add(textPanel, BorderLayout.CENTER);
+        add(formPanel, BorderLayout.WEST);
 
         setSize(600, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
