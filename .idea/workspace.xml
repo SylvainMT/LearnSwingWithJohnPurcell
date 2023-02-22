@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" afterDir="false" />
+    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Lesson 4 Completed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/TextPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +80,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677025670405</updated>
-      <workItem from="1677025671921" duration="2433000" />
+      <workItem from="1677025671921" duration="2852000" />
     </task>
+    <task id="LOCAL-00001" summary="Lesson 4 Completed">
+      <created>1677029519835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677029519835</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lesson 4 Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 4 Completed" />
   </component>
 </project>
