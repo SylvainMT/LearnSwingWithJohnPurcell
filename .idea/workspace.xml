@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Lesson 6 Completed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/Toolbar.java" afterDir="false" />
+    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Lesson 7 Completed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/StringListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/Toolbar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/Toolbar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -35,7 +37,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2M4T5IKNsYmZb3YTTKD74EfmWa5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -81,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677025670405</updated>
-      <workItem from="1677025671921" duration="3900000" />
+      <workItem from="1677025671921" duration="5537000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 4 Completed">
       <created>1677029519835</created>
@@ -97,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677029985685</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Lesson 7 Completed">
+      <created>1677031057668</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677031057668</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +118,7 @@
     <MESSAGE value="Lesson 4 Completed" />
     <MESSAGE value="Lesson 5 Completed" />
     <MESSAGE value="Lesson 6 Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 6 Completed" />
+    <MESSAGE value="Lesson 7 Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 7 Completed" />
   </component>
 </project>
