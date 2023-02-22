@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Lesson 4 Completed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/TextPanel.java" afterDir="false" />
+    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Lesson 6 Completed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/Toolbar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677025670405</updated>
-      <workItem from="1677025671921" duration="2852000" />
+      <workItem from="1677025671921" duration="3900000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 4 Completed">
       <created>1677029519835</created>
@@ -89,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677029519835</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lesson 5 Completed">
+      <created>1677029985685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677029985685</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +105,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lesson 4 Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 4 Completed" />
+    <MESSAGE value="Lesson 5 Completed" />
+    <MESSAGE value="Lesson 6 Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 6 Completed" />
   </component>
 </project>
