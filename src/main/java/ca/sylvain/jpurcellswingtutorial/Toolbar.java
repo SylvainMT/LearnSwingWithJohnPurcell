@@ -18,6 +18,8 @@ class Toolbar extends JPanel implements ActionListener {
 
         setLayout(new FlowLayout(FlowLayout.LEFT));
 
+        setBorder(BorderFactory.createEtchedBorder());
+
         add(helloBtn);
         add(goodByeBtn);
     }
