@@ -16,7 +16,7 @@ class MainFrame extends JFrame {
         toolbar = new Toolbar();
         formPanel = new FormPanel();
 
-        toolbar.setStringListener((String text) -> textPanel.appendText(text));
+        toolbar.setStringListener(textPanel::appendText);
 
 
         add(toolbar, BorderLayout.NORTH);

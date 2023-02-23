@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Lesson 10 Completed">
+    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Cleaned up IntelliJ provided Warnings.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677025670405</updated>
       <workItem from="1677025671921" duration="8138000" />
-      <workItem from="1677100726580" duration="942000" />
+      <workItem from="1677100726580" duration="2881000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 4 Completed">
       <created>1677029519835</created>
@@ -128,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677037992584</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cleaned up IntelliJ provided Warnings.">
+      <created>1677102403740</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677102403740</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +151,7 @@
     <MESSAGE value="Lesson 8 Completed" />
     <MESSAGE value="Lesson 9 Completed" />
     <MESSAGE value="Lesson 10 Completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 10 Completed" />
+    <MESSAGE value="Cleaned up IntelliJ provided Warnings." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up IntelliJ provided Warnings." />
   </component>
 </project>
