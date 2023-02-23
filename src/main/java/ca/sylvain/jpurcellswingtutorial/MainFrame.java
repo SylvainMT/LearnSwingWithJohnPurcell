@@ -20,7 +20,14 @@ class MainFrame extends JFrame {
         toolbar.setStringListener(textPanel::appendText);
         try {
             formPanel.addFormEventListener((FormEvent fe) -> {
-                textPanel.appendText("Name: " + fe.getName() + " & Occupation: " + fe.getOccupation() + "\n");
+                String text = "Name: " +
+                        fe.getName() +
+                        " & Occupation: " +
+                        fe.getOccupation() +
+                        " & Age Catogory: " +
+                        fe.getAgeCategory().getId() +
+                        "\n";
+                textPanel.appendText(text);
             });
         } catch (TooManyListenersException e) {
             throw new RuntimeException(e);

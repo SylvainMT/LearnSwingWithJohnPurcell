@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Working on Lesson 14">
+    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Completed on Lesson 14">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/AgeCategory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +21,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -85,7 +89,7 @@
       <updated>1677025670405</updated>
       <workItem from="1677025671921" duration="8138000" />
       <workItem from="1677100726580" duration="10454000" />
-      <workItem from="1677189355877" duration="1058000" />
+      <workItem from="1677189355877" duration="3195000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 4 Completed">
       <created>1677029519835</created>
@@ -164,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677126618647</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Completed on Lesson 14">
+      <created>1677191041764</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677191041764</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +194,7 @@
     <MESSAGE value="Completed Lesson 12" />
     <MESSAGE value="Completed Lesson 13" />
     <MESSAGE value="Working on Lesson 14" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on Lesson 14" />
+    <MESSAGE value="Completed on Lesson 14" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed on Lesson 14" />
   </component>
 </project>

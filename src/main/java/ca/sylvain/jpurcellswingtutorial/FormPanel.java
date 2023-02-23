@@ -13,7 +13,7 @@ class FormPanel extends JPanel {
     private final JTextField nameField;
     private final JTextField occupationField;
     private final JButton okBtn;
-    private final JList<String> ageList;
+    private final JList<AgeCategory> ageList;
     private FormEventListener formEventListener;
     FormPanel() {
         Dimension dim = new Dimension(250, 10);
@@ -26,10 +26,10 @@ class FormPanel extends JPanel {
         ageList = new JList<>();
         okBtn = new JButton("OK");
 
-        DefaultListModel<String> ageModel = new DefaultListModel<>();
-        ageModel.addElement("Under 18");
-        ageModel.addElement("18 to 65");
-        ageModel.addElement("Over 65");
+        DefaultListModel<AgeCategory> ageModel = new DefaultListModel<>();
+        ageModel.addElement(AgeCategory.UNDER18);
+        ageModel.addElement(AgeCategory.BETWEEN18AND65);
+        ageModel.addElement(AgeCategory.OVER65);
 
         ageList.setModel(ageModel);
         ageList.setSelectedIndex(1);
@@ -42,9 +42,9 @@ class FormPanel extends JPanel {
         okBtn.addActionListener((ActionEvent ae) -> {
             String name = nameField.getText();
             String occupation = occupationField.getText();
-            String age = ageList.getSelectedValue();
-            System.out.println(age);
-            notifyFormEventListeners(new FormEvent(this, name, occupation));
+            AgeCategory age = ageList.getSelectedValue();
+
+            notifyFormEventListeners(new FormEvent(this, name, occupation, age));
         });
 
         Border outerBorder = BorderFactory.createEmptyBorder(5,5,5,5);
