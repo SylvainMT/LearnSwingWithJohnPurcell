@@ -32,12 +32,18 @@ class FormPanel extends JPanel {
         ageModel.addElement("Over 65");
 
         ageList.setModel(ageModel);
+        ageList.setSelectedIndex(1);
         double lineHeight = nameField.getPreferredSize().getHeight();
-        ageList.setPreferredSize(new Dimension((int) nameField.getPreferredSize().getWidth(), (int) Math.round(lineHeight * 3.2)));
+        int ageListPreferredHeight = (int) Math.round(lineHeight * 3.2);
+        int ageListPreferredWidth = (int) nameField.getPreferredSize().getWidth();
+        Dimension ageListPreferredSize = new Dimension(ageListPreferredWidth, ageListPreferredHeight);
+        ageList.setPreferredSize(ageListPreferredSize);
 
         okBtn.addActionListener((ActionEvent ae) -> {
             String name = nameField.getText();
             String occupation = occupationField.getText();
+            String age = ageList.getSelectedValue();
+            System.out.println(age);
             notifyFormEventListeners(new FormEvent(this, name, occupation));
         });
 
