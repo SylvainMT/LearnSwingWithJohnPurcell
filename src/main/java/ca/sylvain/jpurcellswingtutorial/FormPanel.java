@@ -3,6 +3,8 @@ package ca.sylvain.jpurcellswingtutorial;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.TooManyListenersException;
 
 class FormPanel extends JPanel {
 
@@ -11,6 +13,7 @@ class FormPanel extends JPanel {
     private final JTextField nameField;
     private final JTextField occupationField;
     private final JButton okBtn;
+    private FormEventListener formEventListener;
     FormPanel() {
         Dimension dim = new Dimension(250, 10);
         setPreferredSize(dim);
@@ -20,6 +23,12 @@ class FormPanel extends JPanel {
         nameField = new JTextField(10);
         occupationField = new JTextField(10);
         okBtn = new JButton("OK");
+
+        okBtn.addActionListener((ActionEvent ae) -> {
+            String name = nameField.getText();
+            String occupation = occupationField.getText();
+            notifyFormEventListeners(new FormEvent(this, name, occupation));
+        });
 
         Border outerBorder = BorderFactory.createEmptyBorder(5,5,5,5);
         Border innerBorder = BorderFactory.createTitledBorder("Add Person");
@@ -71,5 +80,24 @@ class FormPanel extends JPanel {
         gc.anchor = GridBagConstraints.FIRST_LINE_START;
         add(okBtn, gc);
 
+    }
+
+    public void addFormEventListener(FormEventListener formEventListener) throws TooManyListenersException {
+        if (formEventListener == null) {
+            throw new NullPointerException();
+        }
+
+        if (this.formEventListener != null) {
+            throw new TooManyListenersException();
+        }
+
+        this.formEventListener = formEventListener;
+    }
+
+    private void notifyFormEventListeners(FormEvent fe) {
+        if (formEventListener == null) {
+            return;
+        }
+        formEventListener.formEventOccurred(fe);
     }
 }

@@ -2,6 +2,7 @@ package ca.sylvain.jpurcellswingtutorial;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.TooManyListenersException;
 
 class MainFrame extends JFrame {
     private final TextPanel textPanel;
@@ -17,6 +18,13 @@ class MainFrame extends JFrame {
         formPanel = new FormPanel();
 
         toolbar.setStringListener(textPanel::appendText);
+        try {
+            formPanel.addFormEventListener((FormEvent fe) -> {
+                textPanel.appendText("Name: " + fe.getName() + " & Occupation: " + fe.getOccupation() + "\n");
+            });
+        } catch (TooManyListenersException e) {
+            throw new RuntimeException(e);
+        }
 
 
         add(toolbar, BorderLayout.NORTH);
