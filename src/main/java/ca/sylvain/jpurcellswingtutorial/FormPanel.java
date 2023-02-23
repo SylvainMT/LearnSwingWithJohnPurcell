@@ -13,6 +13,7 @@ class FormPanel extends JPanel {
     private final JTextField nameField;
     private final JTextField occupationField;
     private final JButton okBtn;
+    private final JList<String> ageList;
     private FormEventListener formEventListener;
     FormPanel() {
         Dimension dim = new Dimension(250, 10);
@@ -22,7 +23,17 @@ class FormPanel extends JPanel {
         occupationLabel = new JLabel("Occupation:");
         nameField = new JTextField(10);
         occupationField = new JTextField(10);
+        ageList = new JList<>();
         okBtn = new JButton("OK");
+
+        DefaultListModel<String> ageModel = new DefaultListModel<>();
+        ageModel.addElement("Under 18");
+        ageModel.addElement("18 to 65");
+        ageModel.addElement("Over 65");
+
+        ageList.setModel(ageModel);
+        double lineHeight = nameField.getPreferredSize().getHeight();
+        ageList.setPreferredSize(new Dimension((int) nameField.getPreferredSize().getWidth(), (int) Math.round(lineHeight * 3.2)));
 
         okBtn.addActionListener((ActionEvent ae) -> {
             String name = nameField.getText();
@@ -76,6 +87,10 @@ class FormPanel extends JPanel {
 
         //Row 3 Column 2
         gc.gridy = 2;
+        add(ageList, gc);
+
+        //Row 4 Column 2
+        gc.gridy = 3;
         gc.weighty = 2;
         gc.anchor = GridBagConstraints.FIRST_LINE_START;
         add(okBtn, gc);
