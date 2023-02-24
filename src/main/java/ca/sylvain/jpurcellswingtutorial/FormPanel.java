@@ -20,6 +20,8 @@ class FormPanel extends JPanel {
     private final JCheckBox cndCitizenChk;
     private final JLabel taxLbl;
     private final JTextField taxTxt;
+    private final JLabel genderLbl;
+    private final EnumButtonGroup<Gender> genderOptionGroup;
     private final JButton okBtn;
     private FormEventListener formEventListener;
     FormPanel() {
@@ -38,11 +40,14 @@ class FormPanel extends JPanel {
         cndCitizenChk = new JCheckBox();
         taxLbl = new JLabel("Tax ID:");
         taxTxt = new JTextField(10);
+        genderLbl = new JLabel("Gender:");
+        genderOptionGroup = new EnumButtonGroup(Gender.MALE, EnumButtonGroup.VERTICAL_GROUP);
         okBtn = new JButton("OK");
 
-        setupCitizenNTax();
+
         setupAgeLst();
         setupEmpCbx();
+        setupCitizenNTax();
         setupOkBtn();
         addBorder();
         layoutComponents();
@@ -75,8 +80,10 @@ class FormPanel extends JPanel {
             String emp = (empCbxSelectedItem instanceof String) ? (String) empCbxSelectedItem : "";
             boolean cndCitizen = cndCitizenChk.isSelected();
             String taxID = taxTxt.getText();
+            Gender gender = genderOptionGroup.getSelected();
 
-            notifyFormEventListeners(new FormEvent(this, name, occupation, age, emp, cndCitizen, taxID));
+
+            notifyFormEventListeners(new FormEvent(this, name, occupation, age, emp, cndCitizen, taxID, gender));
         });
     }
 
@@ -186,9 +193,21 @@ class FormPanel extends JPanel {
         gc.anchor = GridBagConstraints.LINE_START;
         add(taxTxt, gc);
 
-
-        //Row 7 column 2
+        //Row 7 Column 1
         gc.gridy = 6;
+        gc.gridx = 0;
+        gc.insets = labelCellInset;
+        gc.anchor = GridBagConstraints.LINE_END;
+        add(genderLbl, gc);
+
+        //Row 7 Column 2
+        gc.gridx = 1;
+        gc.insets = defaultCellInset;
+        gc.anchor = GridBagConstraints.LINE_START;
+        add(genderOptionGroup, gc);
+
+        //Row 8 column 2
+        gc.gridy = 7;
         gc.weighty = 2;
         gc.anchor = GridBagConstraints.FIRST_LINE_START;
         add(okBtn, gc);

@@ -31,6 +31,8 @@ class MainFrame extends JFrame {
                         fe.isCndCitizen() +
                         " : " +
                         fe.getTaxID() +
+                        " : " +
+                        fe.getGender().getText() +
                         "\n";
                 textPanel.appendText(text);
             });
