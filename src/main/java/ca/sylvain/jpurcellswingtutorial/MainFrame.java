@@ -20,12 +20,13 @@ class MainFrame extends JFrame {
         toolbar.setStringListener(textPanel::appendText);
         try {
             formPanel.addFormEventListener((FormEvent fe) -> {
-                String text = "Name: " +
-                        fe.getName() +
-                        " & Occupation: " +
+                String text = fe.getName() +
+                        " : " +
                         fe.getOccupation() +
-                        " & Age Catogory: " +
+                        " : " +
                         fe.getAgeCategory().getId() +
+                        " : " +
+                        fe.getEmpCategory() +
                         "\n";
                 textPanel.appendText(text);
             });
