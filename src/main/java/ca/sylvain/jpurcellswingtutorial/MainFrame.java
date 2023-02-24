@@ -27,6 +27,10 @@ class MainFrame extends JFrame {
                         fe.getAgeCategory().getId() +
                         " : " +
                         fe.getEmpCategory() +
+                        " : " +
+                        fe.isCndCitizen() +
+                        " : " +
+                        fe.getTaxID() +
                         "\n";
                 textPanel.appendText(text);
             });

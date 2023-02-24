@@ -8,69 +8,91 @@ import java.util.TooManyListenersException;
 
 class FormPanel extends JPanel {
 
-    private final JLabel nameLabel;
-    private final JTextField nameField;
-    private final JLabel occupationLabel;
-    private final JTextField occupationField;
+    private final JLabel nameLbl;
+    private final JTextField nameTxt;
+    private final JLabel occupationLbl;
+    private final JTextField occupationTxt;
     private final JLabel ageLbl;
-    private final JList<AgeCategory> ageList;
+    private final JList<AgeCategory> ageLst;
     private final JLabel empLbl;
-    private final JComboBox<String> empCbx;
+    private final JComboBox<String> empCbo;
+    private final JLabel cndCitizenLbl;
+    private final JCheckBox cndCitizenChk;
+    private final JLabel taxLbl;
+    private final JTextField taxTxt;
     private final JButton okBtn;
     private FormEventListener formEventListener;
     FormPanel() {
         Dimension dim = new Dimension(250, 10);
         setPreferredSize(dim);
 
-        nameLabel = new JLabel("Name:");
-        nameField = new JTextField(10);
-        occupationLabel = new JLabel("Occupation:");
-        occupationField = new JTextField(10);
+        nameLbl = new JLabel("Name:");
+        nameTxt = new JTextField(10);
+        occupationLbl = new JLabel("Occupation:");
+        occupationTxt = new JTextField(10);
         ageLbl = new JLabel("Age:");
-        ageList = new JList<>();
+        ageLst = new JList<>();
         empLbl = new JLabel("Employment:");
-        empCbx = new JComboBox<>();
+        empCbo = new JComboBox<>();
+        cndCitizenLbl = new JLabel("Cdn Citizen:");
+        cndCitizenChk = new JCheckBox();
+        taxLbl = new JLabel("Tax ID:");
+        taxTxt = new JTextField(10);
         okBtn = new JButton("OK");
 
-        setupAgeList();
+        setupCitizenNTax();
+        setupAgeLst();
         setupEmpCbx();
         setupOkBtn();
         addBorder();
         layoutComponents();
     }
 
+    private void setupCitizenNTax() {
+        taxLbl.setEnabled(false);
+        taxTxt.setEnabled(false);
+
+        cndCitizenChk.addActionListener((ActionEvent ae) -> {
+            boolean taxFieldEnabled = cndCitizenChk.isSelected();
+            taxLbl.setEnabled(taxFieldEnabled);
+            taxTxt.setEnabled(taxFieldEnabled);
+        });
+    }
+
     private void setupEmpCbx() {
         String[] employmentOptions = new String[] {"employed", "self-employed", "unemployed"};
         DefaultComboBoxModel<String> empModel = new DefaultComboBoxModel<>(employmentOptions);
-        empCbx.setModel(empModel);
+        empCbo.setModel(empModel);
 
     }
 
     private void setupOkBtn() {
         okBtn.addActionListener((ActionEvent ae) -> {
-            String name = nameField.getText();
-            String occupation = occupationField.getText();
-            AgeCategory age = ageList.getSelectedValue();
-            Object empCbxSelectedItem = empCbx.getSelectedItem();
+            String name = nameTxt.getText();
+            String occupation = occupationTxt.getText();
+            AgeCategory age = ageLst.getSelectedValue();
+            Object empCbxSelectedItem = empCbo.getSelectedItem();
             String emp = (empCbxSelectedItem instanceof String) ? (String) empCbxSelectedItem : "";
+            boolean cndCitizen = cndCitizenChk.isSelected();
+            String taxID = taxTxt.getText();
 
-            notifyFormEventListeners(new FormEvent(this, name, occupation, age, emp));
+            notifyFormEventListeners(new FormEvent(this, name, occupation, age, emp, cndCitizen, taxID));
         });
     }
 
-    private void setupAgeList() {
+    private void setupAgeLst() {
         DefaultListModel<AgeCategory> ageModel = new DefaultListModel<>();
         ageModel.addElement(AgeCategory.UNDER18);
         ageModel.addElement(AgeCategory.BETWEEN18AND65);
         ageModel.addElement(AgeCategory.OVER65);
 
-        ageList.setModel(ageModel);
-        ageList.setSelectedIndex(1);
-        double lineHeight = nameField.getPreferredSize().getHeight();
+        ageLst.setModel(ageModel);
+        ageLst.setSelectedIndex(1);
+        double lineHeight = nameTxt.getPreferredSize().getHeight();
         int ageListPreferredHeight = (int) Math.round(lineHeight * 3.2);
-        int ageListPreferredWidth = (int) nameField.getPreferredSize().getWidth();
+        int ageListPreferredWidth = (int) nameTxt.getPreferredSize().getWidth();
         Dimension ageListPreferredSize = new Dimension(ageListPreferredWidth, ageListPreferredHeight);
-        ageList.setPreferredSize(ageListPreferredSize);
+        ageLst.setPreferredSize(ageListPreferredSize);
     }
 
     private void layoutComponents() {
@@ -91,26 +113,26 @@ class FormPanel extends JPanel {
         gc.gridy = 0;
         gc.anchor = GridBagConstraints.LINE_END;
         gc.insets = labelCellInset;
-        add(nameLabel, gc);
+        add(nameLbl, gc);
 
         //Row 1 Column 2
         gc.gridx = 1;
         gc.anchor = GridBagConstraints.LINE_START;
         gc.insets = defaultCellInset;
-        add(nameField, gc);
+        add(nameTxt, gc);
 
         //Row 2 Column 1
         gc.gridx = 0;
         gc.gridy = 1;
         gc.anchor = GridBagConstraints.LINE_END;
         gc.insets = labelCellInset;
-        add(occupationLabel, gc);
+        add(occupationLbl, gc);
 
         //Row 2 Column 2
         gc.gridx = 1;
         gc.anchor = GridBagConstraints.LINE_START;
         gc.insets = defaultCellInset;
-        add(occupationField, gc);
+        add(occupationTxt, gc);
 
         //Row 3 Column 1
         gc.gridy = 2;
@@ -123,7 +145,7 @@ class FormPanel extends JPanel {
         gc.gridx = 1;
         gc.insets = defaultCellInset;
         gc.anchor = GridBagConstraints.LINE_START;
-        add(ageList, gc);
+        add(ageLst, gc);
 
         //Row 4 Column 1
         gc.gridy = 3;
@@ -136,10 +158,37 @@ class FormPanel extends JPanel {
         gc.gridx = 1;
         gc.insets = defaultCellInset;
         gc.anchor = GridBagConstraints.LINE_START;
-        add(empCbx, gc);
+        add(empCbo, gc);
 
-        //Row 5 column 2
+        //Row 5 Column 1
         gc.gridy = 4;
+        gc.gridx = 0;
+        gc.insets = labelCellInset;
+        gc.anchor = GridBagConstraints.LINE_END;
+        add(cndCitizenLbl, gc);
+
+        //Row 5 Column 2
+        gc.gridx = 1;
+        gc.insets = defaultCellInset;
+        gc.anchor = GridBagConstraints.LINE_START;
+        add(cndCitizenChk, gc);
+
+        //Row 6 Column 1
+        gc.gridy = 5;
+        gc.gridx = 0;
+        gc.insets = labelCellInset;
+        gc.anchor = GridBagConstraints.LINE_END;
+        add(taxLbl, gc);
+
+        //Row 6 Column 2
+        gc.gridx = 1;
+        gc.insets = defaultCellInset;
+        gc.anchor = GridBagConstraints.LINE_START;
+        add(taxTxt, gc);
+
+
+        //Row 7 column 2
+        gc.gridy = 6;
         gc.weighty = 2;
         gc.anchor = GridBagConstraints.FIRST_LINE_START;
         add(okBtn, gc);

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Completed on Lesson 15.  &#10;I used an Enum instead of a regular class fot he AgeCategory.  It provides the same functionality.">
+    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Completed on Lesson 16">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormPanel.java" afterDir="false" />
@@ -88,7 +88,7 @@
       <updated>1677025670405</updated>
       <workItem from="1677025671921" duration="8138000" />
       <workItem from="1677100726580" duration="10454000" />
-      <workItem from="1677189355877" duration="8921000" />
+      <workItem from="1677189355877" duration="11656000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 4 Completed">
       <created>1677029519835</created>
@@ -181,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677194707126</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Completed on Lesson 16">
+      <created>1677202182960</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677202182960</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +209,7 @@
     <MESSAGE value="Working on Lesson 14" />
     <MESSAGE value="Completed on Lesson 14" />
     <MESSAGE value="Completed on Lesson 15.  &#10;I used an Enum instead of a regular class fot he AgeCategory.  It provides the same functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed on Lesson 15.  &#10;I used an Enum instead of a regular class fot he AgeCategory.  It provides the same functionality." />
+    <MESSAGE value="Completed on Lesson 16" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed on Lesson 16" />
   </component>
 </project>
