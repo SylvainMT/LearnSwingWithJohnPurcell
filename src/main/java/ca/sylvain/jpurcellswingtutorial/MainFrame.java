@@ -11,6 +11,7 @@ class MainFrame extends JFrame {
     private final TextPanel textPanel;
     private final Toolbar toolbar;
     private final FormPanel formPanel;
+    private JFileChooser fileChooser;
     MainFrame () {
         super("Hello World");
 
@@ -20,6 +21,8 @@ class MainFrame extends JFrame {
         textPanel = new TextPanel();
         toolbar = new Toolbar();
         formPanel = new FormPanel();
+
+        fileChooser = new JFileChooser();
 
         toolbar.setStringListener(textPanel::appendText);
         try {
@@ -90,6 +93,19 @@ class MainFrame extends JFrame {
         exitItem.setMnemonic(KeyEvent.VK_X);
 
         exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.CTRL_DOWN_MASK));
+
+        importDataItem.addActionListener((ActionEvent ae) -> {
+            if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+                System.out.println(fileChooser.getSelectedFile());
+            }
+
+        });
+
+        exportDataItem.addActionListener((ActionEvent ae) -> {
+            if(fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
+                System.out.println(fileChooser.getSelectedFile());
+            }
+        });
 
         exitItem.addActionListener((ActionEvent ae) -> {
             int action = JOptionPane.showConfirmDialog(MainFrame.this,
