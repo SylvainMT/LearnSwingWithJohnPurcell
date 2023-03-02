@@ -3,8 +3,13 @@ package ca.sylvaint.jpurcellswingtutorial.controller;
 import ca.sylvaint.jpurcellswingtutorial.gui.FormEvent;
 import ca.sylvaint.jpurcellswingtutorial.model.*;
 
+import java.util.List;
+
 public class Controller {
     private Database db = new Database();
+    public List<Person> getPeople() {
+        return db.getPeople();
+    }
 
     public void addPerson(FormEvent fe) {
         String name = fe.getName();

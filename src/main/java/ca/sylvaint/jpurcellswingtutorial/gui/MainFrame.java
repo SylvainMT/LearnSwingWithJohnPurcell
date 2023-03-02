@@ -13,6 +13,7 @@ class MainFrame extends JFrame {
     private final TextPanel textPanel;
     private final Toolbar toolbar;
     private final FormPanel formPanel;
+    private final TablePanel tablePanel;
     private JFileChooser fileChooser;
     private Controller controller;
     MainFrame () {
@@ -24,8 +25,10 @@ class MainFrame extends JFrame {
         textPanel = new TextPanel();
         toolbar = new Toolbar();
         formPanel = new FormPanel();
+        tablePanel = new TablePanel();
 
         controller = new Controller();
+        tablePanel.setData(controller.getPeople());
 
         fileChooser = new JFileChooser();
         fileChooser.setFileFilter(new PersonFileFilter());
@@ -50,6 +53,9 @@ class MainFrame extends JFrame {
                 textPanel.appendText(text);
 
                 controller.addPerson(fe);
+                tablePanel.refresh();
+
+
             });
         } catch (TooManyListenersException e) {
             throw new RuntimeException(e);
@@ -57,7 +63,7 @@ class MainFrame extends JFrame {
 
 
         add(toolbar, BorderLayout.NORTH);
-        add(textPanel, BorderLayout.CENTER);
+        add(tablePanel, BorderLayout.CENTER);
         add(formPanel, BorderLayout.WEST);
 
         setSize(600, 500);
