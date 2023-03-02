@@ -50,6 +50,7 @@ class MainFrame extends JFrame {
         add(formPanel, BorderLayout.WEST);
 
         setSize(600, 500);
+        setMinimumSize(new Dimension(500, 400));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
@@ -91,7 +92,17 @@ class MainFrame extends JFrame {
         exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.CTRL_DOWN_MASK));
 
         exitItem.addActionListener((ActionEvent ae) -> {
-            System.exit(0);
+            int action = JOptionPane.showConfirmDialog(MainFrame.this,
+                    "Do you really want to exit the application?",
+                    "Confirm Exit", JOptionPane.OK_CANCEL_OPTION);
+
+            switch (action) {
+                case JOptionPane.OK_OPTION -> System.exit(0);
+            }
+
+
+
+
         });
 
         return menuBar;
