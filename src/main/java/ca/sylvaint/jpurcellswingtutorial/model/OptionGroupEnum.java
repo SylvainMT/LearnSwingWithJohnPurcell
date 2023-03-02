@@ -1,4 +1,4 @@
-package ca.sylvain.jpurcellswingtutorial;
+package ca.sylvaint.jpurcellswingtutorial.model;
 
 public interface OptionGroupEnum<T> {
     String getText();

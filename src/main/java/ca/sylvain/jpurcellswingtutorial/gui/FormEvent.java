@@ -1,4 +1,7 @@
-package ca.sylvain.jpurcellswingtutorial;
+package ca.sylvain.jpurcellswingtutorial.gui;
+
+import ca.sylvaint.jpurcellswingtutorial.model.AgeCategory;
+import ca.sylvaint.jpurcellswingtutorial.model.Gender;
 
 import java.util.EventObject;
 

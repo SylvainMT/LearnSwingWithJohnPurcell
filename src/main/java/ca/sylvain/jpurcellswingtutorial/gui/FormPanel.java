@@ -1,4 +1,7 @@
-package ca.sylvain.jpurcellswingtutorial;
+package ca.sylvain.jpurcellswingtutorial.gui;
+
+import ca.sylvaint.jpurcellswingtutorial.model.AgeCategory;
+import ca.sylvaint.jpurcellswingtutorial.model.Gender;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -42,7 +45,7 @@ class FormPanel extends JPanel {
         taxLbl = new JLabel("Tax ID:");
         taxTxt = new JTextField(10);
         genderLbl = new JLabel("Gender:");
-        genderOptionGroup = new EnumButtonGroup(Gender.MALE, EnumButtonGroup.VERTICAL_GROUP);
+        genderOptionGroup = new EnumButtonGroup<>(Gender.MALE, EnumButtonGroup.VERTICAL_GROUP);
         okBtn = new JButton("OK");
 
         //Set up Mnemomics

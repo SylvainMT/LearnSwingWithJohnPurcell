@@ -1,4 +1,4 @@
-package ca.sylvain.jpurcellswingtutorial;
+package ca.sylvaint.jpurcellswingtutorial.model;
 
 public enum AgeCategory {
     UNDER18(0, "Under 18"),

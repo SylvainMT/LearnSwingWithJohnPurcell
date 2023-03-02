@@ -1,11 +1,11 @@
-package ca.sylvain.jpurcellswingtutorial;
+package ca.sylvaint.jpurcellswingtutorial.model;
 
-public enum Gender implements OptionGroupEnum  {
+public enum Gender implements OptionGroupEnum<Gender> {
     MALE("Male", 0),
     FEMALE("Female", 1);
 
-    private String text;
-    private int id;
+    private final String text;
+    private final int id;
 
     Gender(String text, int id) {
         this.text = text;

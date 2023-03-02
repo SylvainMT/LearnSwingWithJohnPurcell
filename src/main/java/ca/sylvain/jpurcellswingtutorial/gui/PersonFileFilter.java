@@ -1,4 +1,4 @@
-package ca.sylvain.jpurcellswingtutorial;
+package ca.sylvain.jpurcellswingtutorial.gui;
 
 import javax.swing.filechooser.FileFilter;
 import java.io.File;
