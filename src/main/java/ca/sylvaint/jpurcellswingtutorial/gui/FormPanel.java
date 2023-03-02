@@ -1,6 +1,7 @@
 package ca.sylvaint.jpurcellswingtutorial.gui;
 
 import ca.sylvaint.jpurcellswingtutorial.model.AgeCategory;
+import ca.sylvaint.jpurcellswingtutorial.model.EmploymentCategory;
 import ca.sylvaint.jpurcellswingtutorial.model.Gender;
 
 import javax.swing.*;
@@ -8,6 +9,7 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
+import java.util.List;
 import java.util.TooManyListenersException;
 
 class FormPanel extends JPanel {
@@ -19,7 +21,7 @@ class FormPanel extends JPanel {
     private final JLabel ageLbl;
     private final JList<AgeCategory> ageLst;
     private final JLabel empLbl;
-    private final JComboBox<String> empCbo;
+    private final JComboBox<EmploymentCategory> empCbo;
     private final JLabel cndCitizenLbl;
     private final JCheckBox cndCitizenChk;
     private final JLabel taxLbl;
@@ -73,9 +75,13 @@ class FormPanel extends JPanel {
     }
 
     private void setupEmpCbx() {
-        String[] employmentOptions = new String[] {"employed", "self-employed", "unemployed"};
-        DefaultComboBoxModel<String> empModel = new DefaultComboBoxModel<>(employmentOptions);
+        //String[] employmentOptions = new String[] {"employed", "self-employed", "unemployed"};
+        DefaultComboBoxModel<EmploymentCategory> empModel = new DefaultComboBoxModel<>();
+        empModel.addAll(List.of(EmploymentCategory.values()));
+        empModel.removeElement(EmploymentCategory.Other);
+        empModel.setSelectedItem(EmploymentCategory.Employed);
         empCbo.setModel(empModel);
+        empCbo.setEditable(true);
 
     }
 
@@ -84,21 +90,31 @@ class FormPanel extends JPanel {
             String name = nameTxt.getText();
             String occupation = occupationTxt.getText();
             AgeCategory age = ageLst.getSelectedValue();
+
             Object empCbxSelectedItem = empCbo.getSelectedItem();
+            EmploymentCategory empCat;
+            if (empCbxSelectedItem instanceof EmploymentCategory) {
+                empCat = (EmploymentCategory) empCbxSelectedItem;
+            } else {
+                empCat = EmploymentCategory.Other;
+            }
             String emp = (empCbxSelectedItem instanceof String) ? (String) empCbxSelectedItem : "";
             boolean cndCitizen = cndCitizenChk.isSelected();
             String taxID = taxTxt.getText();
             Gender gender = genderOptionGroup.getSelected();
-            notifyFormEventListeners(new FormEvent(this, name, occupation, age, emp, cndCitizen, taxID, gender));
+
+            FormEvent fe = new FormEvent(this, name, occupation, age, empCat, cndCitizen, taxID, gender);
+            if (empCat == EmploymentCategory.Other) {
+                fe.setEmpCategoryOther((empCbxSelectedItem instanceof String) ? (String) empCbxSelectedItem : "");
+            }
+            notifyFormEventListeners(fe);
         });
 
     }
 
     private void setupAgeLst() {
         DefaultListModel<AgeCategory> ageModel = new DefaultListModel<>();
-        ageModel.addElement(AgeCategory.UNDER18);
-        ageModel.addElement(AgeCategory.BETWEEN18AND65);
-        ageModel.addElement(AgeCategory.OVER65);
+        ageModel.addAll(List.of(AgeCategory.values()));
 
         ageLst.setModel(ageModel);
         ageLst.setSelectedIndex(1);

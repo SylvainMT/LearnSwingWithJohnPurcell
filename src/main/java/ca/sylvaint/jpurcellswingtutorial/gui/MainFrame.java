@@ -1,5 +1,7 @@
 package ca.sylvaint.jpurcellswingtutorial.gui;
 
+import ca.sylvaint.jpurcellswingtutorial.controller.Controller;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +14,7 @@ class MainFrame extends JFrame {
     private final Toolbar toolbar;
     private final FormPanel formPanel;
     private JFileChooser fileChooser;
+    private Controller controller;
     MainFrame () {
         super("Hello World");
 
@@ -21,6 +24,8 @@ class MainFrame extends JFrame {
         textPanel = new TextPanel();
         toolbar = new Toolbar();
         formPanel = new FormPanel();
+
+        controller = new Controller();
 
         fileChooser = new JFileChooser();
         fileChooser.setFileFilter(new PersonFileFilter());
@@ -43,6 +48,8 @@ class MainFrame extends JFrame {
                         fe.getGender().getText() +
                         "\n";
                 textPanel.appendText(text);
+
+                controller.addPerson(fe);
             });
         } catch (TooManyListenersException e) {
             throw new RuntimeException(e);

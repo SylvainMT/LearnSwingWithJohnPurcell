@@ -1,6 +1,7 @@
 package ca.sylvaint.jpurcellswingtutorial.gui;
 
 import ca.sylvaint.jpurcellswingtutorial.model.AgeCategory;
+import ca.sylvaint.jpurcellswingtutorial.model.EmploymentCategory;
 import ca.sylvaint.jpurcellswingtutorial.model.Gender;
 
 import java.util.EventObject;
@@ -9,7 +10,8 @@ public class FormEvent extends EventObject {
     private final String name;
     private final String occupation;
     private final AgeCategory ageCategory;
-    private final String empCategory;
+    private final EmploymentCategory empCategory;
+    private String empCategoryOther = null;
     private final boolean cndCitizen;
     private final String taxID;
     private final Gender gender;
@@ -24,7 +26,7 @@ public class FormEvent extends EventObject {
                      String name,
                      String occupation,
                      AgeCategory ageCategory,
-                     String empCategory,
+                     EmploymentCategory empCategory,
                      boolean cndCitizen,
                      String taxID,
                      Gender gender) {
@@ -50,7 +52,7 @@ public class FormEvent extends EventObject {
         return ageCategory;
     }
 
-    public String getEmpCategory() {
+    public EmploymentCategory getEmpCategory() {
         return empCategory;
     }
 
@@ -64,5 +66,17 @@ public class FormEvent extends EventObject {
 
     public Gender getGender() {
         return gender;
+    }
+
+    public String getEmpCategoryOther() {
+        return empCategoryOther;
+    }
+
+    public void setEmpCategoryOther(String empCategoryOther) {
+        if (this.empCategoryOther != null) {
+            System.out.println();
+            throw new RuntimeException("Argument already set, it can't be modified once set.");
+        }
+        this.empCategoryOther = empCategoryOther;
     }
 }

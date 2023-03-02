@@ -9,15 +9,17 @@ public class Person {
     private String occupation;
     private AgeCategory ageCategory;
     private EmploymentCategory empCategory;
+    private String empCategoryOther = null;
     private boolean cndCitizen;
     private String taxID;
     private Gender gender;
 
-    public Person(String name, String occupation, AgeCategory ageCategory, EmploymentCategory empCategory, boolean cndCitizen, String taxID, Gender gender) {
+    public Person(String name, String occupation, AgeCategory ageCategory, EmploymentCategory empCategory, String empCatOther, boolean cndCitizen, String taxID, Gender gender) {
         this.name = name;
         this.occupation = occupation;
         this.ageCategory = ageCategory;
         this.empCategory = empCategory;
+        this.empCategoryOther = empCatOther;
         this.cndCitizen = cndCitizen;
         this.taxID = taxID;
         this.gender = gender;
@@ -88,5 +90,12 @@ public class Person {
 
     public void setGender(Gender gender) {
         this.gender = gender;
+    }
+
+    public String getEmpCategoryOther() {
+        return empCategoryOther;
+    }
+    public void setEmpCategoryOther(String empCategoryOther) {
+        this.empCategoryOther = empCategoryOther;
     }
 }
