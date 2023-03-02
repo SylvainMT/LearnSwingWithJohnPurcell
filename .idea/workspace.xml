@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Completed on Lesson 19">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" afterDir="false" />
+>>>>>>> 1fb02cc... Completed on Lesson 19
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +105,11 @@
       <workItem from="1677189355877" duration="19769000" />
       <workItem from="1677245842942" duration="4735000" />
       <workItem from="1677547394386" duration="1349000" />
+<<<<<<< HEAD
       <workItem from="1677718853904" duration="2276000" />
+=======
+      <workItem from="1677718853904" duration="1366000" />
+>>>>>>> 1fb02cc... Completed on Lesson 19
     </task>
     <task id="LOCAL-00001" summary="Lesson 4 Completed">
       <created>1677029519835</created>
@@ -215,6 +223,7 @@
       <option name="project" value="LOCAL" />
       <updated>1677276903456</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00017" summary="Completed on Lesson 19">
       <created>1677720751752</created>
       <option name="number" value="00017" />
@@ -223,6 +232,9 @@
       <updated>1677720751752</updated>
     </task>
     <option name="localTasksCounter" value="18" />
+=======
+    <option name="localTasksCounter" value="17" />
+>>>>>>> 1fb02cc... Completed on Lesson 19
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
