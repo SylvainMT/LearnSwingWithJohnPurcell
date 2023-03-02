@@ -112,8 +112,8 @@ class MainFrame extends JFrame {
                     "Do you really want to exit the application?",
                     "Confirm Exit", JOptionPane.OK_CANCEL_OPTION);
 
-            switch (action) {
-                case JOptionPane.OK_OPTION -> System.exit(0);
+            if (action == JOptionPane.OK_OPTION) {
+                System.exit(0);
             }
 
 
