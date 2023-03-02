@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Completed on Lesson 17">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/EnumButtonGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/OptionGroupEnum.java" afterDir="false" />
+    <list default="true" id="88133e2d-97f5-42ca-a935-9a793364cedc" name="Changes" comment="Completed on Lesson 19">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/FormPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/sylvain/jpurcellswingtutorial/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +61,7 @@
       <recent name="ca.sylvain.jpurcellswingtutorial" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ca.sylvain.jpurcellswingtutorial.App" />
       <module name="LearnSwingWithJohnPurcell" />
@@ -80,9 +75,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LoginFrame" />
+      <module name="LearnSwingWithJohnPurcell" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.LoginFrame" />
       </list>
     </recent_temporary>
   </component>
@@ -97,7 +100,9 @@
       <workItem from="1677025671921" duration="8138000" />
       <workItem from="1677100726580" duration="10454000" />
       <workItem from="1677189355877" duration="19769000" />
-      <workItem from="1677245842942" duration="4710000" />
+      <workItem from="1677245842942" duration="4735000" />
+      <workItem from="1677547394386" duration="1349000" />
+      <workItem from="1677718853904" duration="1366000" />
     </task>
     <task id="LOCAL-00001" summary="Lesson 4 Completed">
       <created>1677029519835</created>
@@ -204,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677205433357</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Completed on Lesson 18">
+      <created>1677276903456</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1677276903456</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +239,8 @@
     <MESSAGE value="Completed on Lesson 15.  &#10;I used an Enum instead of a regular class fot he AgeCategory.  It provides the same functionality." />
     <MESSAGE value="Completed on Lesson 16" />
     <MESSAGE value="Completed on Lesson 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed on Lesson 17" />
+    <MESSAGE value="Completed on Lesson 18" />
+    <MESSAGE value="Completed on Lesson 19" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed on Lesson 19" />
   </component>
 </project>
