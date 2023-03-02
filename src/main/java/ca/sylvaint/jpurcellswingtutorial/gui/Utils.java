@@ -1,4 +1,4 @@
-package ca.sylvain.jpurcellswingtutorial.gui;
+package ca.sylvaint.jpurcellswingtutorial.gui;
 
 public class Utils {
     public static String getFileExtension(String name) {
