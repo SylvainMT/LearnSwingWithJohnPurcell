@@ -3,6 +3,8 @@ package ca.sylvain.jpurcellswingtutorial;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.util.TooManyListenersException;
 
 class MainFrame extends JFrame {
@@ -81,6 +83,15 @@ class MainFrame extends JFrame {
         showFormItem.addActionListener((ActionEvent ae) -> {
             JCheckBoxMenuItem menuItem = (JCheckBoxMenuItem) ae.getSource();
             formPanel.setVisible(menuItem.isSelected());
+        });
+
+        fileMenu.setMnemonic(KeyEvent.VK_F);
+        exitItem.setMnemonic(KeyEvent.VK_X);
+
+        exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.CTRL_DOWN_MASK));
+
+        exitItem.addActionListener((ActionEvent ae) -> {
+            System.exit(0);
         });
 
         return menuBar;

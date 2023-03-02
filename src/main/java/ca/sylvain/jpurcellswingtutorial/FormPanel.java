@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.util.TooManyListenersException;
 
 class FormPanel extends JPanel {
@@ -44,6 +45,10 @@ class FormPanel extends JPanel {
         genderOptionGroup = new EnumButtonGroup(Gender.MALE, EnumButtonGroup.VERTICAL_GROUP);
         okBtn = new JButton("OK");
 
+        //Set up Mnemomics
+        okBtn.setMnemonic(KeyEvent.VK_O);
+        nameLbl.setDisplayedMnemonic(KeyEvent.VK_N);
+        nameLbl.setLabelFor(nameTxt);
 
         setupAgeLst();
         setupEmpCbx();
@@ -81,10 +86,9 @@ class FormPanel extends JPanel {
             boolean cndCitizen = cndCitizenChk.isSelected();
             String taxID = taxTxt.getText();
             Gender gender = genderOptionGroup.getSelected();
-
-
             notifyFormEventListeners(new FormEvent(this, name, occupation, age, emp, cndCitizen, taxID, gender));
         });
+
     }
 
     private void setupAgeLst() {
