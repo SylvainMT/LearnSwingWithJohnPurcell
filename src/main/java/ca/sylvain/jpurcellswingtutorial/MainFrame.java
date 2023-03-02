@@ -23,6 +23,7 @@ class MainFrame extends JFrame {
         formPanel = new FormPanel();
 
         fileChooser = new JFileChooser();
+        fileChooser.setFileFilter(new PersonFileFilter());
 
         toolbar.setStringListener(textPanel::appendText);
         try {

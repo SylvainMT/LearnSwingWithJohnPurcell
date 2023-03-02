@@ -6,15 +6,20 @@ import java.io.File;
 class PersonFileFilter extends FileFilter {
     @Override
     public boolean accept(File f) {
+
+        if (f.isDirectory()) {
+            return true;
+        }
+
         String name = f.getName();
 
         String extension = Utils.getFileExtension(name);
 
         if (extension == null) {
             return false;
-        } else {
-            return extension.equals(".per");
         }
+
+        return extension.equals(".per");
 
     }
 
