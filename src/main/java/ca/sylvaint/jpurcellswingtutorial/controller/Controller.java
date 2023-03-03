@@ -3,6 +3,7 @@ package ca.sylvaint.jpurcellswingtutorial.controller;
 import ca.sylvaint.jpurcellswingtutorial.gui.FormEvent;
 import ca.sylvaint.jpurcellswingtutorial.model.*;
 
+import java.io.File;
 import java.util.List;
 
 public class Controller {
@@ -24,5 +25,13 @@ public class Controller {
 
         Person person = new Person(name, occupation, ageCat, empCat, empCatOther, cndCitizen, taxId, gender);
         db.addPerson(person);
+    }
+
+    public void saveToFile(File file) {
+        db.saveToFile(file);
+    }
+
+    public void loadFromFile(File file) {
+        db.loadFromFile(file);
     }
 }

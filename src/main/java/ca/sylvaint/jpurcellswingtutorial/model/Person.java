@@ -1,6 +1,12 @@
 package ca.sylvaint.jpurcellswingtutorial.model;
 
-public class Person {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Person implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID=1L;
 
     public static int personAutoIncrementValue = 0;
 

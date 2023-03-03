@@ -110,14 +110,15 @@ class MainFrame extends JFrame {
 
         importDataItem.addActionListener((ActionEvent ae) -> {
             if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
-                System.out.println(fileChooser.getSelectedFile());
+                controller.loadFromFile(fileChooser.getSelectedFile());
+                tablePanel.refresh();
             }
 
         });
 
         exportDataItem.addActionListener((ActionEvent ae) -> {
             if(fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
-                System.out.println(fileChooser.getSelectedFile());
+                controller.saveToFile(fileChooser.getSelectedFile());
             }
         });
 
