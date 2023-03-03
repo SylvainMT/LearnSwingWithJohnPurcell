@@ -19,7 +19,7 @@ class PersonFileFilter extends FileFilter {
             return false;
         }
 
-        return extension.equals(".per");
+        return extension.equals("per");
 
     }
 
