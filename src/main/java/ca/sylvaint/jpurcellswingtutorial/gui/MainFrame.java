@@ -7,6 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.util.TooManyListenersException;
 
 class MainFrame extends JFrame {
@@ -32,6 +33,7 @@ class MainFrame extends JFrame {
 
         fileChooser = new JFileChooser();
         fileChooser.setFileFilter(new PersonFileFilter());
+
 
         toolbar.setStringListener(textPanel::appendText);
         try {
@@ -108,6 +110,7 @@ class MainFrame extends JFrame {
 
         exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.CTRL_DOWN_MASK));
 
+        importDataItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_I, InputEvent.CTRL_DOWN_MASK));
         importDataItem.addActionListener((ActionEvent ae) -> {
             if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
                 controller.loadFromFile(fileChooser.getSelectedFile());
@@ -116,9 +119,17 @@ class MainFrame extends JFrame {
 
         });
 
+        exportDataItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_E, InputEvent.CTRL_DOWN_MASK));
         exportDataItem.addActionListener((ActionEvent ae) -> {
             if(fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
-                controller.saveToFile(fileChooser.getSelectedFile());
+                File selectedFile = fileChooser.getSelectedFile();
+                if (fileChooser.getFileFilter() instanceof PersonFileFilter) {
+                    String extension = Utils.getFileExtension(selectedFile.getName());
+                    if(extension == null || !extension.equals("per") ) {
+                        selectedFile = new File(selectedFile.toString() + ".per");
+                    }
+                }
+                controller.saveToFile(selectedFile);
             }
         });
 
